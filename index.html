@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/hopscotch.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h2>Cross-Platform mHealth with React Native</h2>
+					<h3>2016 Yale Tech Summit</h3>
+					<p>
+						<small>Workshop by <a href="https://ekhall.gitlab.io">E. Kevin Hall, MD</a> / <a href="http://twitter.com/eugekev">@eugekev</a></small>
+					</p>
+					<p><small>
+						Pediatric Cardiology, Yale
+
+					</small>
+					</p>
+				</section>
+
+				<section id="framents">
+					<h2>Course Goal</h2>
+					<p>
+						We will discuss React Native, a framework for developing <span class="fragment highlight-red">native</span> mobile applications on <span class="highlight-red fragment">both</span> Android and iOS.
+					</p>
+					<p class="fragment">
+						We will live code a simple mHealth step counter live for both platforms.
+					</p>
+				</section>
+
+				<section id="fragments">
+					<h2>Historical Context</h2>
+					<small>Computing <span style='color: #f00'>⟼</span> Networked <span style='color: #f00'>⟼</span> Mobile <span style='color: #f00'>⟼</span> ? Artificial Intelligence</small>
+					<p class="fragment fade-in">
+						<small>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</small>
+					</p>
+					<p class="fragment fade-in">
+						<small>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</small>
+					</p>
+					<p class="fragment fade-in">
+						<small>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code class="hljs" data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+
+				<section>Slide 2</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
