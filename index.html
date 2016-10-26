@@ -96,15 +96,22 @@
 					</li>
 					<li class="fragment fade-in" style='margin: 13px 0'>
 						<small>
-								2007 iPhone announcement, 3/6/08 release of SDK for all intents began the mobile development movement. <span class='highlight-red fragment'>Having invested heavily in web, could companies move some of these resources to mobile?</span>
-							</small>
-					</li>
-					<li class="fragment fade-in" style='margin: 13px 0'>
-						<small>
-								HTML and DOM <span style='color: #f00'>⟼</span> Objective C and MVC was a significant change in paradigm. <span class='highlight-red fragment'>Another paradigm change was the desktop/mouse-based to touch/gesture based.</span>
+								2007 = iPhone, 3/2008 = release of SDK: for all intents began the mobile development movement. <span class='highlight-red fragment'>Having invested heavily in web, could companies move some of these resources to mobile?</span>
 							</small>
 					</li>
 				</ol>
+				<aside class='notes'>
+					2: Companies - including the old and stodgy - had put much resources into the web. The internet had fundamentally changed how business was done. Most of these businesses were still trying to steady themselves in this new world.<br/> 4: It turns out
+					that this transition required some paradigm changes.
+				</aside>
+				<p class='fragment fade-in'>
+					This transition required some paradigm changes.
+				</p>
+			</section>
+
+			<!-- Paradigms -->
+			<section>
+				<h2><span style='color: #f00'>2</span> Necessary Paradigm Changes</h2>
 			</section>
 
 			<!-- DOM vs C -->
@@ -112,11 +119,11 @@
 				<aside class="notes">
 					Web _may be_ quicker and easier to write. ObjC is likely more involved, but the code - the fact that it is lower level - means that performance on these smaller less powerful mobile devices was better.
 				</aside>
-				<h2>DOM vs. "C Flavors"</h2>
+				<h2><span style='color: #f00'>#1</span> DOM <span style='color: #f00'>vs.</span> "C"</h2>
 				<pre><code class="html">
 &lt;html&gt;
-&lt;head&gt;
-	&lt;title&gt;Simple Webpage&lt;/title&gt;
+	&lt;head&gt;
+		&lt;title&gt;Simple Webpage&lt;/title&gt;
 	&lt;/head&gt;
 	&lt;body&gt;
 		&lt;h1&gt;Welcome&lt;/h1&gt;
@@ -155,7 +162,7 @@ int main (int argc, const char * argv[])
 				<aside class="notes">
 					Xerox / Apple / Microsoft Microsoft tried to make their mobile platform in the same as desktop. Apple tried a different approach.
 				</aside>
-				<h2>Mouse <span style='color: #f00'>⟼</span> Touch</h2>
+				<h2><span style='color: #f00'>#2</span> Mouse <span style='color: #f00'>vs.</span> Touch</h2>
 				<div id="left-image">
 					<img src='img/windows.jpg' />
 				</div>
@@ -176,13 +183,56 @@ int main (int argc, const char * argv[])
 				<object data='img/web-mobile-vd.svg' type='image/svg+xml'></object>
 			</section>
 
-
-			<!-- The web and mobile development paradox -->
+			<!-- Why Native is Difficult -->
 			<section>
 				<aside class="notes">
 
 				</aside>
+				<h2>Why Native is Difficult</h2>
+				<ol>
+					<li style='margin: 13px 0'>
+						Harder to Layout the Screen, Manually Compute Size/Position
+					</li>
+					<li style='margin: 13px 0'>
+						Much slower development velocity: Need to recompile after <span style='color: #f00'>every</span> change. <span style='color: #f00'>Even to move X a few pixels.</span> Some codebases are very large.
+					</li>
+					<li style='margin: 13px 0'>
+						Release cycle slower: Amazon/Facebook can release multiple versions every day. Early Apple: weeks. <span style='color: #f00'>Experiment and Interate slowly.</span>
+					</li>
+					<li style='margin: 13px 0'>
+						Multiple Separate Platform Teams and Codebases: Apple, Android, Windows
+					</li>
+				</ol>
+			</section>
 
+			<!-- Why Native is Difficult -->
+			<section>
+				<aside class="notes">
+					1. Platform specific UI components like maps, navigation stacks. Reimplementations Never feel the same! Don't
+				</aside>
+				<h2>Why Native is Worth It</h2>
+				<ol>
+					<li style='margin: 13px 0'>
+						The Experience is much better & Users expect it:
+						<ul>
+							<li>
+								Platform specific UI components. Reimplementations are never the same.
+							</li>
+							<li>
+								Don't update with platform updates.
+							</li>
+							<li>
+								<span style='color: #f00'>Gestures!</span>
+							</li>
+						</ul>
+					</li>
+					<li style='margin: 13px 0'>
+						Sophisticated threading model & parallelization - one of the biggest issues to highly responsive webapps.
+					</li>
+					<li style='margin: 13px 0'>
+						Multiple Separate Platform Teams and Codebases: Apple, Android, Windows
+					</li>
+				</ol>
 			</section>
 
 			<!-- Four Horsemen -->
@@ -211,7 +261,7 @@ int main (int argc, const char * argv[])
 				<img src='img/fbemp.png' />
 			</section>
 
-			<!-- Facebook employees -->
+			<!-- Facebook revenue -->
 			<section>
 				<img src='img/fbemp.png' />
 			</section>
