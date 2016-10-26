@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="808px" height="427px" viewBox="0 0 808 427" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-72.000000, -278.000000)">
+            <g id="Group" transform="translate(72.000000, 278.000000)">
+                <circle id="Oval" fill-opacity="0.8" fill="#F5A623" cx="213.5" cy="213.5" r="213.5"></circle>
+                <circle id="Oval-Copy" fill-opacity="0.8" fill="#4A90E2" cx="594.5" cy="213.5" r="213.5"></circle>
+                <text id="Web" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="72" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="137" y="232">Web</tspan>
+                </text>
+                <text id="Mobile" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="72" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="479" y="232">Mobile</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
