@@ -2,125 +2,129 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Hall - 2016 Yale Tech Summit</title>
+  <title>Hall - 2016 Yale Tech Summit</title>
 
-	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/blood.css">
-	<link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/blood.css">
+  <link rel="stylesheet" href="css/custom.css">
 
-	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="lib/css/solarized-light.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/solarized-light.css">
 
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement('link');
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-		document.getElementsByTagName('head')[0].appendChild(link);
-	</script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
 </head>
 
 <body>
-	<div class="reveal">
-		<div class="slides">
+  <div class="reveal">
+    <div class="slides">
 
-			<section>
-				<h2>Cross-Platform mHealth with React Native</h2>
-				<h3>2016 Yale Tech Summit</h3>
-				<p>
-					<small>Workshop by <a href="https://ekhall.gitlab.io">E. Kevin Hall, MD</a> / <a href="http://twitter.com/eugekev">@eugekev</a></small>
-				</p>
-				<p><small>
+      <section>
+        <h2>Cross-Platform mHealth with React Native</h2>
+        <h3>2016 Yale Tech Summit</h3>
+        <p>
+          <small>Workshop by <a href="https://ekhall.gitlab.io">E. Kevin Hall, MD</a> / <a href="http://twitter.com/eugekev">@eugekev</a></small>
+        </p>
+        <p><small>
 						Pediatric Cardiology, Yale
 
 					</small>
-				</p>
-			</section>
+        </p>
+      </section>
+      <!-- Course Goal -->
+      <section id="framents">
+        <h2>Course Goal</h2>
+        <p>
+          We will discuss React Native, a framework for developing <span class="fragment highlight-red">native</span> mobile applications on <span class="highlight-red fragment">both</span> Android and iOS.
+        </p>
+        <p class="fragment">
+          We will live code a simple mHealth step counter live for both platforms.
+        </p>
+      </section>
 
-			<!-- Course Goal -->
-			<section id="framents">
-				<h2>Course Goal</h2>
-				<p>
-					We will discuss React Native, a framework for developing <span class="fragment highlight-red">native</span> mobile applications on <span class="highlight-red fragment">both</span> Android and iOS.
-				</p>
-				<p class="fragment">
-					We will live code a simple mHealth step counter live for both platforms.
-				</p>
-			</section>
+      <!-- Historical Context -->
+      <section id="fragments">
+        <h2>Historical Context</h2>
+        <small>Computing <span style='color: #f00'>⟼</span> Desktop Networked <span style='color: #f00 ; font-size: 2em'>⟼</span> Mobile <span style='color: #f00'>⟼</span> ? Artificial Intelligence</small>
+        <div id='left'>
+          <ol>
+            <li class="fragment fade-in" data-fragment-index='1' style='margin: 13px 0'>
+              <small>
+  								Last 3-4 decades: Massive increase in computing power. <span style='color: #f00'> iPhone 6: 120 million times faster than the Apollo computer.</span>
+  							</small>
+            </li>
+            <li class="fragment fade-in" data-fragment-index='2' style='margin: 13px 0'>
+              <small>
+  								Massive increase in communications power: Semaphore Line <span style='color: #f00'>⟼</span> 2015 International Telecommunications Union Report 3.2 billion on internet. <span style='color: #f00'>Metcalf's Law</span>
+  							</small>
+            </li>
+            <li class="fragment fade-in" data-fragment-index='3' style='margin: 13px 0'>
+              <small>
+  								Massive increase in always-on communications capability / distance and decrease in cost of same. Massive decrease in device size. <span style='color: #f00'>2010 Arab Spring / 2013 #HasJustineLandedYet</span>
+  							</small>
+            </li>
+            <li class="fragment fade-in" data-fragment-index='4' style='margin: 13px 0'>
+              <small>
+  								Massive decrease in effort needed to begin and engage in communication. <span style='color: #f00'>Enables Ecological Momemtary Assessments</span>
+  							</small>
+            </li>
+          </ol>
+        </div>
+        <div id='right'>
+          <img class='fragment' data-fragment-index='2' src='img/Semaphore.jpg' style='width: 300px; float: right' />
+        </div>
+      </section>
 
-			<!-- Historical Context -->
-			<section id="fragments">
-				<h2>Historical Context</h2>
-				<small>Computing <span style='color: #f00'>⟼</span> Desktop Networked <span style='color: #f00 ; font-size: 2em'>⟼</span> Mobile <span style='color: #f00'>⟼</span> ? Artificial Intelligence</small>
-				<ol>
-					<li class="fragment fade-in" style='margin: 13px 0'>
-						<small>
-								Last 3-4 decades: Massive increase in computing power. <span class='highlight-red fragment'> iPhone 6: 120 million times faster than the Apollo computer.</span>
-							</small>
-					</li>
-					<li class="fragment fade-in" style='margin: 13px 0'>
-						<small>
-								Massive increase in communications power: Semaphore Line <span style='color: #f00'>⟼</span> 2015 International Telecommunications Union Report 3.2 billion on internet. <span class='highlight-red fragment'>Metcalf's Law</span>
-							</small>
-					</li>
-					<li class="fragment fade-in" style='margin: 13px 0'>
-						<small>
-								Massive increase in always-on communications capability / distance and decrease in cost of same. Massive decrease in device size. <span class='highlight-red fragment'>2010 Arab Spring / 2013 #HasJustineLandedYet</span>
-							</small>
-					</li>
-					<li class="fragment fade-in" style='margin: 13px 0'>
-						<small>
-								Massive decrease in effort needed to begin and engage in communication. <span class='highlight-red fragment'>Enables Ecological Momemtary Assessments</span>
-							</small>
-					</li>
-				</ol>
-			</section>
-
-			<!-- Desktop Networked to Mobile -->
-			<section>
-				<h2>Desktop Networked <span style='color: #f00'>⟼</span> Mobile</h2>
-				<ol>
-					<li class="fragment fade-in" style='margin: 13px 0'>
-						<small>
+      <!-- Desktop Networked to Mobile -->
+      <section>
+        <h2>Desktop Networked <span style='color: #f00'>⟼</span> Mobile</h2>
+        <ol>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            <small>
 								Early 2000s, Personal Computer Revolution had settled out on the web browser and a slowly standardizing and increasingly cross-platform set of principles.
 							</small>
-					</li>
-					<li class="fragment fade-in" style='margin: 13px 0'>
-						<small>
+          </li>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            <small>
 								Companies had invested large amounts of money, time, and effort in web programmers and their websites even though tech still 'in infancy'.
 							</small>
-					</li>
-					<li class="fragment fade-in" style='margin: 13px 0'>
-						<small>
+          </li>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            <small>
 								2007 = iPhone, 3/2008 = release of SDK: for all intents began the mobile development movement. <span class='highlight-red fragment'>Having invested heavily in web, could companies move some of these resources to mobile?</span>
 							</small>
-					</li>
-				</ol>
-				<aside class='notes'>
-					2: Companies - including the old and stodgy - had put much resources into the web. The internet had fundamentally changed how business was done. Most of these businesses were still trying to steady themselves in this new world.<br/> 4: It turns out
-					that this transition required some paradigm changes.
-				</aside>
-				<p class='fragment fade-in'>
-					This transition required some paradigm changes.
-				</p>
-			</section>
+          </li>
+        </ol>
+        <aside class='notes'>
+          2: Companies - including the old and stodgy - had put much resources into the web. The internet had fundamentally changed how business was done. Most of these businesses were still trying to steady themselves in this new world.
+          <br/> 4: It turns out that this transition required some paradigm changes.
+        </aside>
+        <p class='fragment fade-in'>
+          This transition required some paradigm changes.
+        </p>
+      </section>
 
-			<!-- Paradigms -->
-			<section>
-				<h2><span style='color: #f00'>2</span> Necessary Paradigm Changes</h2>
-			</section>
+      <!-- Paradigms -->
+      <section>
+        <h2><span style='color: #f00'>2</span> Necessary Paradigm Changes</h2>
+      </section>
 
-			<!-- DOM vs C -->
-			<section>
-				<aside class="notes">
-					Web _may be_ quicker and easier to write. ObjC is likely more involved, but the code - the fact that it is lower level - means that performance on these smaller less powerful mobile devices was better.
-				</aside>
-				<h2><span style='color: #f00'>#1</span> DOM <span style='color: #f00'>vs.</span> "C"</h2>
-				<pre><code class="html">
+      <!-- DOM vs C -->
+      <section>
+        <aside class="notes">
+          Web _may be_ quicker and easier to write. ObjC is likely more involved, but the code - the fact that it is lower level - means that performance on these smaller less powerful mobile devices was better.
+        </aside>
+        <h2><span style='color: #f00'>#1</span> DOM <span style='color: #f00'>vs.</span> "C"</h2>
+        <pre><code class="html">
 &lt;html&gt;
 	&lt;head&gt;
 		&lt;title&gt;Simple Webpage&lt;/title&gt;
@@ -131,7 +135,7 @@
 	&lt;/body&gt;
 &lt;/html&gt;
 						</code></pre>
-				<pre><code class="objc">
+        <pre><code class="objc">
 int main (int argc, const char * argv[])
 {
   NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -144,159 +148,179 @@ int main (int argc, const char * argv[])
   id       myObject2 = nil;  // Weak typing
 						</code></pre>
 
-				<p>HTML on top, Objective-C on bottom</p>
-			</section>
+        <p>HTML on top, Objective-C on bottom</p>
+      </section>
 
-			<!-- HTML -> Mobile Translation -->
-			<section>
-				<object data='img/Ionic.svg' type='image/svg+xml'></object>
-				<object data='img/PhoneGap.svg' type='image/svg+xml'></object>
-				<img src='img/jquery.png' id='image' />
-				<p>
-					And several more...
-				</p>
-			</section>
+      <!-- HTML -> Mobile Translation -->
+      <section>
+        <object data='img/Ionic.svg' type='image/svg+xml'></object>
+        <object data='img/PhoneGap.svg' type='image/svg+xml'></object>
+        <img src='img/jquery.png' id='image' />
+        <p>
+          And several more...
+        </p>
+      </section>
 
-			<!-- Mouse vs Touch-->
-			<section>
-				<aside class="notes">
-					Xerox / Apple / Microsoft Microsoft tried to make their mobile platform in the same as desktop. Apple tried a different approach.
-				</aside>
-				<h2><span style='color: #f00'>#2</span> Mouse <span style='color: #f00'>vs.</span> Touch</h2>
-				<div id="left-image">
-					<img src='img/windows.jpg' />
-				</div>
-				<div id="right-image">
-					<img src='img/iphone.jpg' />
-				</div>
-			</section>
+      <!-- Mouse vs Touch-->
+      <section>
+        <aside class="notes">
+          Xerox / Apple / Microsoft Microsoft tried to make their mobile platform in the same as desktop. Apple tried a different approach.
+        </aside>
+        <h2><span style='color: #f00'>#2</span> Mouse <span style='color: #f00'>vs.</span> Touch</h2>
+        <div id="left-image">
+          <img src='img/windows.jpg' />
+        </div>
+        <div id="right-image">
+          <img src='img/iphone.jpg' />
+        </div>
+      </section>
 
-			<!-- Web and Mobile Venn -->
-			<section>
-				<aside class="notes">
-					In reality these are two separate paradigms. The fact that these are two different paradigms was proven when one looks at the differing levels success of the microsoft and apple efforts.
-				</aside>
-				<h2>Mouse <span style='color: #f00'>&</span> Touch Paradigms</h2>
-				<p>
-					The web and drag and drop translated <span style='color: #f00'>poorly</span> to touch and gestures.
-				</p>
-				<object data='img/web-mobile-vd.svg' type='image/svg+xml'></object>
-			</section>
+      <!-- Web and Mobile Venn -->
+      <section>
+        <aside class="notes">
+          In reality these are two separate paradigms. The fact that these are two different paradigms was proven when one looks at the differing levels success of the microsoft and apple efforts.
+        </aside>
+        <h2>Mouse <span style='color: #f00'>&</span> Touch Paradigms</h2>
+        <p>
+          The web and drag and drop translated <span style='color: #f00'>poorly</span> to touch and gestures.
+        </p>
+        <object data='img/web-mobile-vd.svg' type='image/svg+xml'></object>
+      </section>
 
-			<!-- Why Native is Difficult -->
-			<section>
-				<aside class="notes">
+      <!-- Why Native is Difficult -->
+      <section>
+        <aside class="notes">
 
-				</aside>
-				<h2>Why Native is Difficult</h2>
-				<ol>
-					<li style='margin: 13px 0'>
-						Harder to Layout the Screen, Manually Compute Size/Position
-					</li>
-					<li style='margin: 13px 0'>
-						Much slower development velocity: Need to recompile after <span style='color: #f00'>every</span> change. <span style='color: #f00'>Even to move X a few pixels.</span> Some codebases are very large.
-					</li>
-					<li style='margin: 13px 0'>
-						Release cycle slower: Amazon/Facebook can release multiple versions every day. Early Apple: weeks. <span style='color: #f00'>Experiment and Interate slowly.</span>
-					</li>
-					<li style='margin: 13px 0'>
-						Multiple Separate Platform Teams and Codebases: Apple, Android, Windows
-					</li>
-				</ol>
-			</section>
+        </aside>
+        <h2>Why Native is Difficult</h2>
+        <ol>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            Harder to Layout the Screen, Manually Compute Size/Position
+          </li>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            Much slower development velocity: Need to recompile after <span style='color: #f00'>every</span> change. <span style='color: #f00'>Even to move X a few pixels.</span> Some codebases are very large.
+          </li>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            Release cycle slower: Amazon/Facebook can release multiple versions every day. Early Apple: weeks. <span style='color: #f00'>Experiment and Interate slowly.</span>
+          </li>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            Multiple Separate Platform Teams and Codebases: Apple, Android, Windows
+          </li>
+        </ol>
+      </section>
 
-			<!-- Why Native is Difficult -->
-			<section>
-				<aside class="notes">
-					1. Platform specific UI components like maps, navigation stacks. Reimplementations Never feel the same! Don't
-				</aside>
-				<h2>Why Native is Worth It</h2>
-				<ol>
-					<li style='margin: 13px 0'>
-						The Experience is much better & Users expect it:
-						<ul>
-							<li>
-								Platform specific UI components. Reimplementations are never the same.
-							</li>
-							<li>
-								Don't update with platform updates.
-							</li>
-							<li>
-								<span style='color: #f00'>Gestures!</span>
-							</li>
-						</ul>
-					</li>
-					<li style='margin: 13px 0'>
-						Sophisticated threading model & parallelization - one of the biggest issues to highly responsive webapps.
-					</li>
-					<li style='margin: 13px 0'>
-						Multiple Separate Platform Teams and Codebases: Apple, Android, Windows
-					</li>
-				</ol>
-			</section>
+      <!-- Why Native is Difficult -->
+      <section>
+        <aside class="notes">
+          1. Platform specific UI components like maps, navigation stacks. Reimplementations Never feel the same! Don't
+        </aside>
+        <h2>Why Native is Worth It</h2>
+        <ol>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            The Experience is much better & Users expect it:
+            <ul>
+              <li>
+                Platform specific UI components. Reimplementations are never the same.
+              </li>
+              <li>
+                Don't update with platform updates.
+              </li>
+              <li>
+                <span style='color: #f00'>Gestures!</span>
+              </li>
+            </ul>
+          </li>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            Sophisticated threading model & parallelization - one of the biggest issues to highly responsive webapps.
+          </li>
+        </ol>
+      </section>
 
-			<!-- Four Horsemen -->
-			<section>
-				<img src='img/fourhorse.png' />
-				<h3><a href='https://www.youtube.com/watch?v=XCvwCcEP74Q'>Four Horsemen</a>, Scott Galloway, 2015 DLD Conf</h3>
-			</section>
+      <!-- Four Horsemen -->
+      <section>
+        <img src='img/fourhorse.png' />
+        <h3><a href='https://www.youtube.com/watch?v=XCvwCcEP74Q'>Four Horsemen</a>, Scott Galloway, 2015 DLD Conf</h3>
+      </section>
 
-			<!-- Facebook and Start of Mobile -->
-			<section>
-				<h3><img src='img/fb.png' id='title-icon'><br/>
+      <!-- Four Business Models-->
+      <section>
+        <aside class='notes'>
+          Google: internet is very useful - for all intents and purposes they're the only real gateway.
+          Facebook: One could argue that _at times_ they're a popular movement away from irrelevance.
+        </aside>
+        <h3>Businesses of the Horsemen</h3>
+        <ul>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            <span style='color: #f00'>Amazon:</span> Sells you physical goods, gets them to you
+          </li>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            <span style='color: #f00'>Apple:</span> Sells you physical hardware + luxury items
+          </li>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            <span style='color: #f00'>Google:</span> Runs web services, sells target markets to advertisers
+          </li>
+          <li class="fragment fade-in" style='margin: 13px 0'>
+            <span style='color: #f00'>Facebook:</span> Runs a social network web service
+          </li>
+        </ul>
+      </section>
+
+      <!-- Facebook and Start of Mobile -->
+      <section>
+        <h3><img src='img/fb.png' id='title-icon'><br/>
 						Facebook
 						<br/>missed the start of mobile</h3>
-				<blockquote cite="https://www.sec.gov/Archives/edgar/data/1326801/000119312512222368/d287954ds1a.htm#toc287954_2">
-					&ldquo;We do not currently directly generate any meaningful revenue from the use of Facebook mobile products, and our ability to do so successfully is unproven&rdquo;
-				</blockquote>
-				<p style='color: #999'>- 2012, Facebook SEC filing for IPO</p>
-				<blockquote cite="https://www.sec.gov/Archives/edgar/data/1326801/000119312512222368/d287954ds1a.htm#toc287954_2">
-					&ldquo;Mobile is going to crush Facebook&rdquo;
-				</blockquote>
-				<p style='color: #999'>- Mark Cuban, Facebook IPO Post Mortem</p>
-			</section>
+        <blockquote cite="https://www.sec.gov/Archives/edgar/data/1326801/000119312512222368/d287954ds1a.htm#toc287954_2">
+          &ldquo;We do not currently directly generate any meaningful revenue from the use of Facebook mobile products, and our ability to do so successfully is unproven&rdquo;
+        </blockquote>
+        <p style='color: #999'>- 2012, Facebook SEC filing for IPO</p>
+        <blockquote cite="https://www.sec.gov/Archives/edgar/data/1326801/000119312512222368/d287954ds1a.htm#toc287954_2">
+          &ldquo;Mobile is going to crush Facebook&rdquo;
+        </blockquote>
+        <p style='color: #999'>- Mark Cuban, Facebook IPO Post Mortem</p>
+      </section>
 
-			<!-- Facebook's own efforts -->
-			<section>
-				<img src='img/fbemp.png' />
-			</section>
+      <!-- Facebook's own efforts -->
+      <section>
+        <img src='img/fbemp.png' />
+      </section>
 
-			<!-- Facebook revenue -->
-			<section>
-				<img src='img/fbemp.png' />
-			</section>
+      <!-- Facebook revenue -->
+      <section>
+        <img src='img/facebook-mobile-1.jpg' />
+      </section>
 
-		</div>
-	</div>
+    </div>
+  </div>
 
-	<script src="lib/js/head.min.js"></script>
-	<script src="js/reveal.js"></script>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
 
-	<script>
-		// More info https://github.com/hakimel/reveal.js#configuration
-		Reveal.initialize({
-			history: true,
-			transition: 'convex',
-			// More info https://github.com/hakimel/reveal.js#dependencies
-			dependencies: [{
-				src: 'plugin/markdown/marked.js'
-			}, {
-				src: 'plugin/markdown/markdown.js'
-			}, {
-				src: 'plugin/notes/notes.js',
-				async: true
-			}, {
-				src: 'plugin/highlight/highlight.js',
-				async: true,
-				callback: function() {
-					hljs.initHighlightingOnLoad();
-					hljs.configure({
-						tabReplace: '    '
-					})
-				}
-			}]
-		});
-	</script>
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      history: true,
+      transition: 'convex',
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [{
+        src: 'plugin/markdown/marked.js'
+      }, {
+        src: 'plugin/markdown/markdown.js'
+      }, {
+        src: 'plugin/notes/notes.js',
+        async: true
+      }, {
+        src: 'plugin/highlight/highlight.js',
+        async: true,
+        callback: function() {
+          hljs.initHighlightingOnLoad();
+          hljs.configure({
+            tabReplace: '    '
+          })
+        }
+      }]
+    });
+  </script>
 </body>
 
 </html>
